@@ -1,4 +1,0 @@
-name: Deployment Pipeline without tests
-on:
-  push:
-    branches: [main]

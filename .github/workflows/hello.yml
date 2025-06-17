@@ -1,0 +1,20 @@
+name: Say hello
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the message
+        run: |
+          echo "Hola ERICK"
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          
+      - name: Dime la fecha
+        run: date
+      - run: ls -l
