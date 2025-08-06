@@ -1,18 +1,32 @@
+# Pokedex for CI
 
+Este proyecto es una SPA (Single Page Application) desarrollada en React que simula una Pokédex. Se integró un pipeline de CI con GitHub Actions y se desplegó a Vercel.
 
-[![Deployment Pipeline](https://github.com/erickdiazbabelgroup/pokedex-for-ci/actions/workflows/pipeline.yml/badge.svg)](https://github.com/erickdiazbabelgroup/pokedex-for-ci/actions/workflows/pipeline.yml)
-# Full Stack open CI/CD
+## 🔧 Tecnologías
 
-This repository is used for the CI/CD module of the Full stack open course
+- React
+- GitHub Actions
+- Vercel (Hosting)
+- Jest / ESLint
 
-Fork the repository to complete course exercises
+## 🚀 CI/CD
 
-## Commands
+El flujo incluye:
+- Instalación de dependencias
+- Linting (`eslint`)
+- Pruebas con `jest`
+- Deploy automático a Vercel
 
-Start by running `npm install` inside the project folder
+## 🐛 Problemas conocidos
 
-`npm start` to run the webpack dev server
-`npm test` to run tests
-`npm run eslint` to run eslint
-`npm run build` to make a production build
-`npm run start-prod` to run your production build
+En Vercel, las imágenes podrían no cargarse si:
+- No están en `/public`
+- Se usan rutas relativas mal construidas
+- No se incluye `_redirects` si se usa React Router
+
+**Solución sugerida:**
+1. Usa rutas absolutas para imágenes desde `public` (`/img.png`).
+2. Agrega un archivo `_redirects` para SPA:
+   ```
+   /* /index.html 200
+   ```
