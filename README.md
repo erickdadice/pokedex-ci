@@ -17,6 +17,7 @@ El flujo incluye:
 - Pruebas con `jest`
 - Deploy automático a Vercel
 
+
 ## 🐛 Problemas conocidos
 
 En Vercel, las imágenes podrían no cargarse si:
@@ -30,3 +31,5 @@ En Vercel, las imágenes podrían no cargarse si:
    ```
    /* /index.html 200
    ```
+
+
